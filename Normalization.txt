@@ -1,0 +1,44 @@
+//author
+author(author_id,name, address, phone);
+F ={
+Author_ID -> name, adress, phone
+}
+The relation is in good normal form in BCNF because the author_id is a superey.
+Author_ID is in BCNF because [Author_ID]+ = Author_ID, name, address, phone
+
+
+//published
+publisher(publisher_id,name, address, phone);
+F = {
+Publisher_ID -> name, adress, phone
+}
+The relation is in good normal form in BCNF because the publisher_id is a superey.
+Publisher_ID is in BCNF because [Publisher_ID]+ = Publisher_ID, name, address, phone
+
+//Book
+book(isbn, name, genre, number_of_pages, price);
+F = {
+ISBN -> name, genre, number_of_pages, price 
+}
+
+ISBN is in BCNF because [ISBN]+ = ISBN, name,genre, number_of_pages, price 
+
+//Warehouse
+warehouse(warehouse_id, address, phone)
+F = {
+Warehouse_ID -> address, phone
+}
+Warehouse_ID is in BCNF because [Warehouse_ID]+ = Warehouse_ID, address, phone
+
+//User
+user(user_id, name, address, phone)
+User_ID -> name, address, phone
+User_ID is in BCNF because [User_ID]+ = User_ID, name, address, phone
+
+//stored
+stored(ISBN, warehouse_id)
+ISBN -> Warehouse_ID
+ISBN is in BCNF because [ISBN]+ = ISBN, Warehouse_ID
+
+
+
